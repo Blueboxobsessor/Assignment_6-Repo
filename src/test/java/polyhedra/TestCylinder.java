@@ -145,12 +145,11 @@ public class TestCylinder {
         Scanner ins = new Scanner(new StringReader("4 12"));
 
         cyl.read(ins);
-        System.out.println("Radius-----> " + cyl.getRadius()); //Debug
-        //assertThat(cyl.getRadius(), closeTo(12, Point.EQ_THRESHOLD));
-        //assertThat(cyl.getDiameter(), closeTo(24, Point.EQ_THRESHOLD));
-
-        //assertThat(cyl.getHeight(), closeTo(4, Point.EQ_THRESHOLD));
-        System.out.println("Height-----> " + cyl.getHeight()); //Debug
+        
+        assertThat(cyl.getRadius(), closeTo(12, Point.EQ_THRESHOLD));
+        assertThat(cyl.getDiameter(), closeTo(24, Point.EQ_THRESHOLD));
+        assertThat(cyl.getHeight(), closeTo(4, Point.EQ_THRESHOLD));
+        
         // BoundingBox...
         Point expectedPoint = new Point(24, 24, 4);
         Point point = cyl.getBoundingBox().getUpperRightVertex();
