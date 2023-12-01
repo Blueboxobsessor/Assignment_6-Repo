@@ -84,6 +84,8 @@ public class Cylinder extends Polyhedron {
     {
         this.height = h;
         
+        double d = this.getDiameter();
+        
         this.boundingBox.setUpperRightVertex(d, d, height);
     }
 
