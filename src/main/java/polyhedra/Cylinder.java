@@ -109,9 +109,9 @@ public class Cylinder extends Polyhedron {
     public void read(Scanner scanner)
     {
         this.radius = scanner.nextDouble();
-        System.out.println("Radius: " + this.radius + "<-------------------"); //Debug
+
         this.height = scanner.nextDouble();
-        System.out.println("Height: " + this.height + "<-------------------"); //Debug
+
         double d = this.getDiameter();
  
         this.boundingBox.setUpperRightVertex(d, d, height);
