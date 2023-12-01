@@ -128,6 +128,11 @@ public class Cylinder extends Polyhedron {
     @Override
     public String toString()
     {
-        return "Cylinder.toString Not Implemented";
+        return String.format(
+                "%sRadius: %.1f Height: %.1f",
+                super.toString(),
+                this.radius,
+                this.height
+            );
     }
 }
